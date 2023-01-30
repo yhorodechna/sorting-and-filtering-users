@@ -1,17 +1,32 @@
-import { AudioOutlined } from '@ant-design/icons';
-import { Input, Space } from 'antd';
-import React from 'react';
+import React from "react";
+import "./App.css";
+import { Footer } from "./components/footer/Footer";
+import { Header } from "./components/header/Header";
+import { Main } from "./components/main/Main";
+import { Sidebar } from "./components/sidebar/Sidebar";
+import {
+  useQuery,
+  useMutation,
+  useQueryClient,
+  QueryClient,
+  QueryClientProvider,
+} from "react-query";
+import axios from "axios";
+import { ReactQueryDevtools } from "react-query/devtools";
+import { Parent } from "./containers/Parent";
 
-const { Search } = Input;
+const queryClient = new QueryClient();
 
+const App: React.FC = () => {
+  return (
+    <div>
+      <QueryClientProvider client={queryClient}>
+        <Parent />
 
-const onSearch = (value: string) => console.log(value);
-
-const App: React.FC = () => (
-  <Space direction="vertical">
-    <Search placeholder="input search text" onSearch={onSearch} style={{ width: 200 }} />
-    
-  </Space>
-);
+        <ReactQueryDevtools />
+      </QueryClientProvider>
+    </div>
+  );
+};
 
 export default App;

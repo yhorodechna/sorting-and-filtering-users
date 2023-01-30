@@ -1,0 +1,13 @@
+
+.App {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  grid-template-rows: 50px 1fr 50px;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar main"
+    "sidebar footer";
+  text-align: center;
+  height: 100vh;
+  background-color: #777;
+}
