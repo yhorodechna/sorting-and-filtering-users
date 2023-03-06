@@ -6,7 +6,7 @@ import { Main } from "../components/main/Main";
 import { Sidebar } from "../components/sidebar/Sidebar";
 import { useQuery } from "react-query";
 import axios from "axios";
-import { IResult } from '../common/Interfaces';
+import { IResult } from '../components/exampleSix/common/Interfaces';
 
 
 export const Parent: React.FC = () => {

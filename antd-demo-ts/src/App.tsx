@@ -19,6 +19,8 @@ import { ColorSquare } from "./components/exampleTwo/ExampleTwo";
 import { ToDoList } from "./components/exampleThree/ExampleThree";
 import { Calculator } from "./components/exampleFour/ExampleFour";
 import { Dialog } from "./components/exampleFive/ExampleFive";
+import {  Page } from "./components/exampleSix/Page";
+import { IMenuItem } from "./components/exampleSix/common/Interfaces";
 
 const queryClient = new QueryClient();
 
@@ -34,6 +36,7 @@ const App: React.FC = () => {
     localStorage.setItem("key", JSON.stringify(value));
   }
 
+
   return (
     <div>
       <QueryClientProvider client={queryClient}>
@@ -46,7 +49,12 @@ const App: React.FC = () => {
         {/* <ToDoList data={data} onDataChange={handleDataChange} /> */}
         {/* <ReactQueryDevtools /> */}
         {/* < Calculator /> */}
-        <Dialog />
+        {/* <Dialog /> */}
+        <Page  defaultSelectedIds={["Second"]} />
+        <br/>
+        <Page  defaultSelectedIds={["Fifth"]} />
+        <br/>
+        <Page  defaultSelectedIds={[]} />
       </QueryClientProvider>
     </div>
   );

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { IFilterSettings, IResult } from '../../common/Interfaces';
+import { IFilterSettings, IResult } from '../exampleSix/common/Interfaces';
 import { useForm, SubmitHandler } from "react-hook-form";
 
 
@@ -19,7 +19,7 @@ type Inputs = {
 export function Sidebar({ data, onFilterChange }: IProps) {
     const { register, handleSubmit, watch, getValues, formState: { errors } } = useForm<Inputs>();
     const onSubmit: SubmitHandler<Inputs> = data => {
-        onFilterChange && onFilterChange({ gender: 'male' , full_name:data.fullName })
+        onFilterChange && onFilterChange({ gender: 'male', full_name: data.fullName })
     };
 
     // console.log(watch("fullName")) // watch input value by passing the name of it

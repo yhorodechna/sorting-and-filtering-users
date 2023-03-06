@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Main.module.css";
-import { IResult, IHuman } from '../../common/Interfaces';
+import { IResult, IHuman } from '../exampleSix/common/Interfaces';
 import { Table } from "antd";
 import { ColumnsType } from "antd/es/table";
 

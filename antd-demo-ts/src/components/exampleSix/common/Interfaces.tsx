@@ -29,3 +29,10 @@ export interface IFilterSettings{
     gender:string;
     full_name: string;
 }
+
+
+export interface IMenuItem {
+    title: string;
+    id:string
+    subItems?: IMenuItem[];
+}
